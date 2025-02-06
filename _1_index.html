@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="_1_style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>password generator</h1>
+        <div class="display-container">
+            <input   placeholder="password" class="display" data-password-display> 
+                                                                           <!-- data-password-display   -> custom attribute  -->
+            <button  data-copy  >
+                 <span data-copymsg></span>
+                 <img src="copy.svg" alt="img" width="23" height="23">
+
+            </button>
+
+            <!-- <input type="text" value="Hello World" id="myInput">
+        <button onclick="myFunction()">Copy text</button>  -->
+          
+        </div>
+
+        <div class="input-container">
+            <div class="length-container">
+                <p>password length</p>
+                 <p data-lengthnumber>0</p>
+            </div>
+              <!-- slider -->
+             <input type="range" min="1" max="20" class="slider" step="1" data-length-slider  >
+
+             <!-- checkboxs -->
+              <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">include uppercase letter</label>
+              </div>
+ 
+              <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">include lowercase letter</label>
+              </div>
+
+              <div class="check">
+                <input type="checkbox" id="number">
+                <label for="number">include number</label>
+              </div>
+
+              <div class="check">
+                <input type="checkbox" id="symbol">
+                <label for="symbol">include symbol</label>
+              </div>
+
+              
+              <!-- strength -->
+
+              <div class="strength-container">
+                <p>strength</p>
+                <!-- indicator -->
+                <div class="indicator"  data-indicator></div>
+              </div>
+
+              <!-- generate password button  -->
+              <button class="generatebutton"> generate password</button>
+        </div>
+    </div>
+    <!-- <script>
+      function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput");
+        
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+          
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+    </script> -->
+    <script src="script.js"></script>
+</body>
+</html>
